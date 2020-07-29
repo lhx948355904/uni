@@ -4,6 +4,7 @@
 		<view>
             <text class="title">{{title}}</text>
         </view>
+		<button @click="a.b.c=2">button</button>
 	</view>
 </template>
 
@@ -12,14 +13,30 @@
 	export default Vue.extend({
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				a:{
+					b:{
+						c:1
+					}
+				},
 			}
 		},
 		onLoad() {
-
+			// console.log(123)
 		},
 		methods: {
 
+		},
+		mounted(){
+			console.log("mounted")
+		},
+		watch:{
+			a:{
+				handler:function(newv,oldv){
+					console.log(newv,oldv)
+				},
+				immediate:true
+			}
 		}
 	});
 </script>
