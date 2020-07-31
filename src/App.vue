@@ -1,10 +1,5 @@
-<template>
-    <div>测试</div>
-</template>
-
 <script lang="ts">
-    import Vue from 'vue';
-    export default Vue.extend({
+    export default {
         mpType: 'app',
         onLaunch() {
             console.log('App Launch')
@@ -15,7 +10,7 @@
         onHide() {
             console.log('App Hide')
         }
-    });
+    };
 </script>
 
 <style>

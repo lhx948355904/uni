@@ -51,6 +51,7 @@
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
+    "mysql2": "^2.1.0",
     "regenerator-runtime": "^0.12.1",
     "uni-simple-router": "^1.5.5",
     "vue": "^2.6.11",

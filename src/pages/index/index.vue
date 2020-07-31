@@ -4,7 +4,6 @@
 		<view>
             <text class="title">{{title}}</text>
         </view>
-		<button @click="a.b.c=2">button</button>
 	</view>
 </template>
 
@@ -14,11 +13,6 @@
 		data() {
 			return {
 				title: 'Hello',
-				a:{
-					b:{
-						c:1
-					}
-				},
 			}
 		},
 		onLoad() {
@@ -28,16 +22,8 @@
 
 		},
 		mounted(){
-			console.log("mounted")
 		},
-		watch:{
-			a:{
-				handler:function(newv,oldv){
-					console.log(newv,oldv)
-				},
-				immediate:true
-			}
-		}
+		
 	});
 </script>
 
