@@ -1,9 +1,24 @@
 <template>
 	<view class="content">
-        <image class="logo" src="../../static/logo.png"></image>
+        <img class="logo" src="@/static/banner.png"/>
 		<view>
-            <text class="title">{{title}}</text>
-        </view>
+			<view>
+				<text class="title">{{title}}</text>
+				<view :key="item.key" v-for="item in topList">
+					<navigator :url="item.href">
+						<img :src="item.icon">
+						<text>{{item.name}}</text>
+					</navigator>
+				</view>
+			</view>
+
+			<view>
+				<view :key="item.key" v-for="item in topList">
+					
+				</view>
+			</view>
+		</view>
+		
 	</view>
 </template>
 
@@ -12,7 +27,24 @@
 	export default Vue.extend({
 		data() {
 			return {
-				title: 'Hello',
+				title: '当前任务',
+				topList:[{
+					key:"wxgd",
+					name:"维修工单",
+					href:"@",
+					icon:"@/static/top_wxgd.png",
+				},{
+					key:"sbby",
+					name:"设备保养",
+					href:"@",
+					icon:"@/static/top_sbby.png",
+				},{
+					key:"sbxj",
+					name:"设备巡检",
+					href:"@",
+					icon:"@/static/top_sbxj.png",
+				}],
+				menuList:[],
 			}
 		},
 		onLoad() {
@@ -27,18 +59,4 @@
 	});
 </script>
 
-<style>
-	.content {
-		text-align: center;
-		height: 400upx;
-	}
-    .logo{
-        height: 200upx;
-        width: 200upx;
-        margin-top: 200upx;
-    }
-	.title {
-		font-size: 36upx;
-		color: #8f8f94;
-	}
-</style>
+<style scoped lang="less" src="./index.less"></style>
