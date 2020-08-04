@@ -1,6 +1,5 @@
 <script lang="ts">
     export default {
-        mpType: 'app',
         onLaunch() {
             console.log('App Launch')
         },

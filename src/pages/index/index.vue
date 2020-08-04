@@ -1,20 +1,23 @@
 <template>
 	<view class="content">
         <img class="logo" src="@/static/banner.png"/>
-		<view>
+		<view class="container">
 			<view>
 				<text class="title">{{title}}</text>
 				<view :key="item.key" v-for="item in topList">
 					<navigator :url="item.href">
-						<img :src="item.icon">
+						<img :src="require('@/static/'+item.icon+'.png')">
 						<text>{{item.name}}</text>
 					</navigator>
 				</view>
 			</view>
 
 			<view>
-				<view :key="item.key" v-for="item in topList">
-					
+				<view :key="item.key" v-for="item in menuList">
+					<navigator :url="item.href">
+						<img :src="require('@/static/'+item.icon+'.png')">
+						<text>{{item.name}}</text>
+					</navigator>
 				</view>
 			</view>
 		</view>
@@ -32,17 +35,17 @@
 					key:"wxgd",
 					name:"维修工单",
 					href:"@",
-					icon:"@/static/top_wxgd.png",
+					icon:"top_wxgd",
 				},{
 					key:"sbby",
 					name:"设备保养",
 					href:"@",
-					icon:"@/static/top_sbby.png",
+					icon:"top_sbby",
 				},{
 					key:"sbxj",
 					name:"设备巡检",
 					href:"@",
-					icon:"@/static/top_sbxj.png",
+					icon:"top_sbxj",
 				}],
 				menuList:[],
 			}
@@ -54,6 +57,12 @@
 
 		},
 		mounted(){
+			(this as any).$http.get("/api/menulist").then((data:any) => {
+				this.menuList = data.data.menuList;
+			})
+
+			console.log((this as any).$route);
+			
 		},
 		
 	});

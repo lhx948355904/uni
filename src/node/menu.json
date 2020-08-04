@@ -1,7 +1,49 @@
 {
     "menuList":[
         {
-            "name":"test"
+            "name":"故障申报",
+            "url":"",
+            "icon":"gzsb"
+        },{
+            "name":"故障清单",
+            "url":"",
+            "icon":"gzqd"
+        },{
+            "name":"自主维修",
+            "url":"",
+            "icon":"zzwx"
+        },{
+            "name":"维修记录",
+            "url":"",
+            "icon":"wxjl"
+        },{
+            "name":"巡检计划",
+            "url":"",
+            "icon":"xjjh"
+        },{
+            "name":"巡检记录",
+            "url":"",
+            "icon":"xjjl"
+        },{
+            "name":"保养计划",
+            "url":"",
+            "icon":"byjh"
+        },{
+            "name":"保养记录",
+            "url":"",
+            "icon":"byjl"
+        },{
+            "name":"设备台账",
+            "url":"",
+            "icon":"sbtz"
+        },{
+            "name":"备件",
+            "url":"",
+            "icon":"bj"
+        },{
+            "name":"知识库",
+            "url":"",
+            "icon":"zsk"
         }
     ]
 }
