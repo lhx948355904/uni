@@ -7,4 +7,6 @@ files.keys().forEach(key => {
   modules.push(...item)
 })
 
+console.log(modules);
+
 export default modules

@@ -5,10 +5,10 @@
 			<view>
 				<text class="title">{{title}}</text>
 				<view :key="item.key" v-for="item in topList">
-					<navigator :url="item.href">
+					<router-link :to="{path:item.href}">
 						<img :src="require('@/static/'+item.icon+'.png')">
 						<text>{{item.name}}</text>
-					</navigator>
+					</router-link>
 				</view>
 			</view>
 
@@ -34,36 +34,34 @@
 				topList:[{
 					key:"wxgd",
 					name:"维修工单",
-					href:"@",
+					href:"/pages/index/index",
 					icon:"top_wxgd",
 				},{
 					key:"sbby",
 					name:"设备保养",
-					href:"@",
+					href:"/pages/news/index",
 					icon:"top_sbby",
 				},{
 					key:"sbxj",
 					name:"设备巡检",
-					href:"@",
+					href:"/pages/map/index",
 					icon:"top_sbxj",
 				}],
 				menuList:[],
 			}
 		},
 		onLoad() {
-			// console.log(123)
 		},
 		methods: {
 
-		},
+		}, 
 		mounted(){
 			(this as any).$http.get("/api/menulist").then((data:any) => {
 				this.menuList = data.data.menuList;
 			})
 
-			console.log((this as any).$route);
-			
 		},
+		
 		
 	});
 </script>
