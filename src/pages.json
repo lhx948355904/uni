@@ -2,7 +2,7 @@
 	"pages": [
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-            "path": "./pages/index/index",
+            "path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "首页"
 				// "app-plus": {
@@ -19,19 +19,19 @@
 			}
 		},
 		{
-			"path": "./pages/map/index",
+			"path": "pages/map/index",
 			"style": {
 				"navigationBarTitleText": "地图"
 			}
 		},
 		{
-			"path": "./pages/news/index",
+			"path": "pages/news/index",
 			"style": {
 				"navigationBarTitleText": "消息"
 			}
 		},
 		{
-			"path": "./pages/my/index",
+			"path": "pages/my/index",
 			"style": {
 				"navigationBarTitleText": "我的"
 			}
@@ -58,23 +58,23 @@
 		"borderStyle": "black",
 		"backgroundColor": "#F8F8F8",
 		"list": [{
-				"pagePath": "./pages/index/index",
+				"pagePath": "pages/index/index",
 				"iconPath": "static/home.png",
 				"selectedIconPath": "static/home_active.png",
 				"text": "首页"
 			},
 			{
-				"pagePath": "./pages/map/index",
+				"pagePath": "pages/map/index",
 				"iconPath": "static/map.png",
 				"selectedIconPath": "static/map_active.png",
 				"text": "地图"
 			}, {
-				"pagePath": "./pages/news/index",
+				"pagePath": "pages/news/index",
 				"iconPath": "static/news.png",
 				"selectedIconPath": "static/news_active.png",
 				"text": "消息"
 			}, {
-				"pagePath": "./pages/my/index",
+				"pagePath": "pages/my/index",
 				"iconPath": "static/my.png",
 				"selectedIconPath": "static/my_active.png",
 				"text": "我的"
