@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+
 // @ts-ignore;
 import router from './router'
 import axios from 'axios'

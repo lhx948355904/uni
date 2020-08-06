@@ -18,10 +18,18 @@ module.exports = {
     filenameHashing: false,
 
     chainWebpack: config => {
-    config.resolve.alias
-        .set("@", resolve("src"))
+        config.resolve.alias
+            .set("@", resolve("src"))
     },
-
+    css: {
+        loaderOptions: {
+            less: {
+                lessOptions: {
+                    javascriptEnabled: true
+                  } 
+            },
+          }
+      },
     // 代码保存时进行eslint检测
     lintOnSave: false,
     // webpack-dev-server 相关配置

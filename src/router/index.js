@@ -12,11 +12,10 @@ const router = new Router({
         useUniConfig:true,  //采用在pages.json下的所有页面配置信息,默认为true
     },
 });
-console.log(router)
 
 //全局路由前置守卫
 router.beforeEach((to, from, next) => {
-  console.log(to,from,next)
+//   console.log(to,from,next)
    next()
 })
 // 全局路由后置守卫
