@@ -12,7 +12,6 @@
     };
 </script>
 
-<style>
-    @import url('@/common/common.css');
+<style lang="less">
 </style>
 

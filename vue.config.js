@@ -1,6 +1,6 @@
 const path = require("path");
-function resolve(dir){
-    return path.join(__dirname,dir)
+function resolve(dir) {
+    return path.join(__dirname, dir)
 }
 
 module.exports = {
@@ -21,15 +21,16 @@ module.exports = {
         config.resolve.alias
             .set("@", resolve("src"))
     },
-    css: {
-        loaderOptions: {
-            less: {
-                lessOptions: {
-                    javascriptEnabled: true
-                  } 
-            },
-          }
-      },
+    pluginOptions: {
+        "style-resources-loader": {
+            preProcessor: "less",
+            patterns: [
+                //这个是加上自己的路径，
+                //注意：试过不能使用别名路径
+                path.resolve(__dirname, "./src/common/common.less")
+            ]
+        }
+    },
     // 代码保存时进行eslint检测
     lintOnSave: false,
     // webpack-dev-server 相关配置
@@ -49,7 +50,7 @@ module.exports = {
                 // 目标代理服务器地址
                 target: 'http://localhost:3001',
                 // 开启代理，本地创建一个虚拟服务器 允许跨域
-                changeOrigin: true, 
+                changeOrigin: true,
             },
         },
     },
