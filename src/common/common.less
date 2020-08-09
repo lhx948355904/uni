@@ -1,10 +1,52 @@
+/*
+* 公共样式及变量
+*
+*/
+
+@fontColor:#666;
+@borderColor:#efeff4;
+@fontSizeIndex:32rpx;
+@border:1rpx solid @borderColor;
+
+a{
+    text-decoration: none;
+    color:@fontColor;
+}
 
 .ilb{
     display: inline-block;
     vertical-align: top;
 }
 
+.blk{
+    display: block;
+    width: 100%;
+}
+
 .tc{
     text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex_wrap{
+    flex-wrap: wrap;
+}
+
+.flex_r{
+    .flex;
+    justify-content: space-around;
+}
+
+.flex_c{
+    .flex;
+    align-content: center;
+}
+
+.height(@height){
+    height:@height;
+    line-height: @height;
 }
 

@@ -2,23 +2,32 @@
 	<view class="content">
         <img class="logo" src="@/static/banner.png"/>
 		<view class="container">
-			<view>
+
+			<view class="topContainer">
 				<text class="title">{{title}}</text>
-				<view :key="item.key" v-for="item in topList">
-					<router-link :to="{path:item.href}">
-						<img :src="require('@/static/'+item.icon+'.png')">
-						<text>{{item.name}}</text>
-					</router-link>
+
+				<view class="_container">
+					<view :key="item.key" v-for="item in topList">
+						<router-link :to="{path:item.href}">
+							<img :src="require('@/static/'+item.icon+'.png')">
+							<text>{{item.name}}</text>
+						</router-link>
+					</view>
 				</view>
 			</view>
 
-			<view>
-				<view :key="item.key" v-for="item in menuList">
-					<navigator :url="item.href">
-						<img :src="require('@/static/'+item.icon+'.png')">
-						<text>{{item.name}}</text>
-					</navigator>
+			<view class="navContainer">
+				<text class="title">运维管理</text>
+
+				<view class="_container">
+					<view :key="item.key" v-for="item in menuList">
+						<router-link :to="{path:item.href}">
+							<img :src="require('@/static/'+item.icon+'.png')">
+							<text>{{item.name}}</text>
+						</router-link>
+					</view>
 				</view>
+				
 			</view>
 		</view>
 		

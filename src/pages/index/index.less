@@ -1,17 +1,100 @@
-// @import '../../common/common';
-
 .logo{
     width:100%;
 }
 
+.cards{
+    margin:20rpx;
+    width: ~"calc(100% - 40rpx)";
+    background-color: white;
+    font-size: @fontSizeIndex;
+}
+
 .content{
     background-color: #EFEFEF;
+    padding:1rpx;
+    font-size: 0;
 
-    .container{
-        margin:20rpx;
+    .topContainer{
+        .cards;
         
         .title{
-            .ilb;
+            .tc;
+            .blk;
+            color: @fontColor;
+            border-bottom: @border;
+            .height(60rpx);
+        }
+
+        ._container{
+            .flex_r;
+            height:200rpx;
+
+            >view{
+                width:33.33%;
+                border:@border;
+            }
+
+            a{
+                .blk;
+                height:100%;
+                .tc;
+                .flex_c;
+                .flex_wrap;
+                .flex_r;
+
+                img{
+                    height: 40%;
+                }
+
+                text{
+                    .blk;
+                    
+                }
+            }
+        }
+    }
+
+    .navContainer{
+        .cards;
+
+        .title{
+            .tc;
+            .blk;
+            color: @fontColor;
+            border-bottom: @border;
+            .height(60rpx);
+        }
+
+        ._container{
+            .blk;
+            .flex_c;
+            .flex_wrap;
+           
+
+            >view{
+                width:25%;
+                height:200rpx;
+                border: @border;
+                box-sizing: border-box
+            }
+
+            a{
+                .blk;
+                height:100%;
+                .tc;
+                .flex_c;
+                .flex_wrap;
+                .flex_r;
+
+                img{
+                    height: 30%;
+                }
+
+                text{
+                    .blk;
+                    margin-top: 20rpx;
+                }
+            }
         }
     }
 }
