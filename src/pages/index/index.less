@@ -2,11 +2,16 @@
     width:100%;
 }
 
+//top and bottom card
 .cards{
     margin:20rpx;
     width: ~"calc(100% - 40rpx)";
     background-color: white;
     font-size: @fontSizeIndex;
+}
+
+.uni-page-body,uni-view.content{
+    height: 100%;
 }
 
 .content{
@@ -26,7 +31,7 @@
         }
 
         ._container{
-            .flex_r;
+            .flex_r_around;
             height:200rpx;
 
             >view{
@@ -38,9 +43,9 @@
                 .blk;
                 height:100%;
                 .tc;
-                .flex_c;
+                .flex_c_center;
                 .flex_wrap;
-                .flex_r;
+                .flex_r_around;
 
                 img{
                     height: 40%;
@@ -67,13 +72,13 @@
 
         ._container{
             .blk;
-            .flex_c;
+            .flex_c_center;
             .flex_wrap;
            
 
             >view{
                 width:25%;
-                height:200rpx;
+                height:180rpx;
                 border: @border;
                 box-sizing: border-box
             }
@@ -82,9 +87,9 @@
                 .blk;
                 height:100%;
                 .tc;
-                .flex_c;
+                .flex_c_center;
                 .flex_wrap;
-                .flex_r;
+                .flex_r_around;
 
                 img{
                     height: 30%;

@@ -1,5 +1,5 @@
 /*
-* 公共样式及变量
+* common style & variable
 *
 */
 
@@ -27,6 +27,11 @@ a{
     text-align: center;
 }
 
+.tc_self{
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
 .flex{
     display: flex;
 }
@@ -35,12 +40,17 @@ a{
     flex-wrap: wrap;
 }
 
-.flex_r{
+.flex_r_around{
     .flex;
     justify-content: space-around;
 }
 
-.flex_c{
+.flex_r_between{
+    .flex;
+    justify-content: space-between;
+}
+
+.flex_c_center{
     .flex;
     align-content: center;
 }

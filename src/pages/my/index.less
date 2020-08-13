@@ -1,0 +1,78 @@
+body{
+    background-color: #EFEFEF;
+}
+
+.status_bar{
+    .height(60rpx);
+    padding:14rpx 30rpx;
+    .tc;
+    .flex_r_between;
+    background: transparent;
+    z-index: 1;
+    position: absolute;
+    width:100%;
+    box-sizing: border-box;
+
+    .right_btn{
+        img:first-child{
+            margin-right: 20rpx;
+        }
+    }
+
+    img{
+        height: 40rpx;
+    }
+}
+
+.userInfo{
+    background: url("@/static/my-bg.jpg");
+    .flex_c_center;
+    height:250rpx;
+    padding: 88rpx 0;
+    background-size: 100% 100%;
+    .tc;
+    .flex_wrap;
+
+    img{
+        height:100rpx;
+        width:100rpx;
+        border-radius: 50%;
+        margin-bottom: 30rpx;
+        .tc_self;
+    }
+
+    text{
+        .ilb;
+        width: 100%;
+        .tc;
+        color: white;
+    }
+}
+
+/deep/ uni-image>div, uni-image>img{
+    margin-top:6rpx;
+}
+
+/deep/ .uni-list-item__container{
+    padding:10px 15px;
+    padding-left:0;
+}
+
+/deep/ .uni-list-item__content-title{
+    font-weight: bold;
+}
+
+.logout{
+    text{
+        .tc;
+        .blk;
+        margin-left: 15%;
+        width: 70%;
+        border-radius: 100rpx;
+        .height(80rpx);
+        color:white;
+        background: linear-gradient(#55BDFF,#4583F1);
+        font-size: 30rpx;
+        margin-top: 30rpx;
+    }
+}
