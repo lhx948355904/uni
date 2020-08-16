@@ -16,5 +16,9 @@ const home = [
     path: '/pages/my/index',
     name: 'news',
   },
+  {
+    path: '/pages/login',
+    name: 'login',
+  },
 ]
 export default home

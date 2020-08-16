@@ -9,9 +9,10 @@ const app = http.createServer(async (req, res) => {
     } else if (method == "GET" && url.includes("/menulist")) {
         // res.end("测试")
         fs.readFile("./menu.json", (err, data) => {
-            console.log('data', data.toString());
             res.end(data)
         })
+    }else if (method == "POST" && url.includes("/login")) {
+        console.log(req,res)
     }
 })
 
