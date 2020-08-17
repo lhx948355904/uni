@@ -2,7 +2,7 @@ import axios from "axios"
 
 const http = axios.create({
     timeout: 1000 * 60,
-    baseURL: ""
+    baseURL: "/api"
 })
 
 export function postAction(url,params){

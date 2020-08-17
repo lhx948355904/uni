@@ -1,5 +1,5 @@
 <template>
-  <div @click="login">登录</div>
+  <div @click="loginMethod">登录</div>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
     return {};
   },
   methods: {
-      login(){
+      loginMethod(){
           login({username:'admin',password:123}).then(resp => {
               console.log(resp)
           })
