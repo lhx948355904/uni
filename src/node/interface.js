@@ -12,6 +12,7 @@ const app = http.createServer(async (req, res) => {
             res.end(data)
         })
     }else if (method == "POST" && url.includes("/login")) {
+        console.log(req.body)
         res.end("测试")
         // if(req)
     }

@@ -5,9 +5,9 @@
             "url":"",
             "icon":"gzsb"
         },{
-            "name":"故障清单",
+            "name":"故障记录",
             "url":"",
-            "icon":"gzqd"
+            "icon":"gzjl"
         },{
             "name":"自主维修",
             "url":"",
@@ -17,17 +17,17 @@
             "url":"",
             "icon":"wxjl"
         },{
-            "name":"巡检计划",
+            "name":"巡检工单",
             "url":"",
-            "icon":"xjjh"
+            "icon":"xjgd"
         },{
             "name":"巡检记录",
             "url":"",
             "icon":"xjjl"
         },{
-            "name":"保养计划",
+            "name":"保养工单",
             "url":"",
-            "icon":"byjh"
+            "icon":"bygd"
         },{
             "name":"保养记录",
             "url":"",
