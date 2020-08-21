@@ -1,22 +1,29 @@
-const http = require("http");
+const koa = require('koa');
+const router = require('koa-router')();
+const bodyParser = require("koa-bodyparser");
 const fs = require("fs");
+const app = new koa();
 
-const app = http.createServer(async (req, res) => {
-    const { method, url, param } = req;
-    console.log(method, url, param)
-    if (url.includes(".ico")) {
-        return
-    } else if (method == "GET" && url.includes("/menulist")) {
-        // res.end("测试")
-        fs.readFile("./menu.json", (err, data) => {
-            res.end(data)
-        })
-    }else if (method == "POST" && url.includes("/login")) {
-        console.log(req.body)
-        res.end("测试")
-        // if(req)
-    }
+app.use(async (ctx,next) => {
+    next();
 })
 
-app.listen(3001)
+router
+.get("/menulist",async (ctx,next) => {
+    await fs.readFileSync(__dirname+"/menu.json", (err, data) => {
+        console.log(data)
+        ctx.body = data;
+    })
+})
 
+router.post("/login",(ctx,next) => {
+    ctx.body = "test"
+    next();
+    // const {username,password} = ctx.params;
+    // console.log(username,password)
+    // ctx.response.body = 'logintest';
+})
+
+app.use(bodyParser())
+app.use(router.routes())
+app.listen(3001)
