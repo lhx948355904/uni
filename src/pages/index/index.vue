@@ -36,6 +36,8 @@
 
 <script lang="ts">
 	import Vue from 'vue';
+	import {menuList} from "@/api/api"
+
 	export default Vue.extend({
 		data() {
 			return {
@@ -65,10 +67,9 @@
 
 		}, 
 		mounted(){
-			(this as any).$http.get("/api/menulist").then((data:any) => {
+			(menuList as any).then((data:any) => {
 				this.menuList = data.data.menuList;
 			})
-
 		},
 		
 		

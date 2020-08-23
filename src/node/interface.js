@@ -8,12 +8,16 @@ app.use(async (ctx,next) => {
     next();
 })
 
+let file = "";
+fs.readFile(__dirname+"/menu.json", (err, data) => {
+    file = data.toString();
+})
+
+
 router
 .get("/menulist",async (ctx,next) => {
-    await fs.readFileSync(__dirname+"/menu.json", (err, data) => {
-        console.log(data)
-        ctx.body = data;
-    })
+    console.log(file)
+    ctx.body = file;
 })
 
 router.post("/login",(ctx,next) => {

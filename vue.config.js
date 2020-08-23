@@ -51,6 +51,9 @@ module.exports = {
                 target: 'http://localhost:3001',
                 // 开启代理，本地创建一个虚拟服务器 允许跨域
                 changeOrigin: true,
+                pathRewrite: {
+                    '^/api': ''
+                  }
             },
         },
     },
