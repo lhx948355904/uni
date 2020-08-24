@@ -80,6 +80,7 @@
     "@vue/cli-service": "~4.4.0",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
+    "dtsmake": "0.0.10",
     "fibers": "^5.0.0",
     "jest": "^25.4.0",
     "mini-types": "*",

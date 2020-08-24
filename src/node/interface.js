@@ -13,14 +13,11 @@ fs.readFile(__dirname+"/menu.json", (err, data) => {
     file = data.toString();
 })
 
-
 router
 .get("/menulist",async (ctx,next) => {
-    console.log(file)
     ctx.body = file;
 })
-
-router.post("/login",(ctx,next) => {
+.post("/login",(ctx,next) => {
     ctx.body = "test"
     next();
     // const {username,password} = ctx.params;

@@ -2,24 +2,25 @@
   <div @click="loginMethod">登录</div>
 </template>
 
-<script>
-import { login } from "@/api/api";
+<script lang="ts">
+import Vue from "vue";
+import  {login}  from "@/api/api";
 
-export default {
+export default Vue.extend({
   data() {
     return {};
   },
   methods: {
-      loginMethod(){
-          login({username:'admin',password:123}).then(resp => {
-              console.log(resp)
-          })
-      }
+    loginMethod() {
+      login({ username: "admin", password: 123 }).then((resp:any) => {
+        console.log(resp);
+      });
+    },
   },
   mounted() {
 
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>
