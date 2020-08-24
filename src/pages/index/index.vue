@@ -65,7 +65,7 @@ export default Vue.extend({
   onLoad() {},
   methods: {},
   mounted() {
-    menuList().then((datas: any) => {
+    menuList({}).then((datas: any) => {
       this.menuList = datas.data.menuList;
     });
   },

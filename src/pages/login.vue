@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import  {login}  from "@/api/api";
+import { login } from "@/api/api";
 
 export default Vue.extend({
   data() {
@@ -12,14 +12,12 @@ export default Vue.extend({
   },
   methods: {
     loginMethod() {
-      login({ username: "admin", password: 123 }).then((resp:any) => {
+      login({ username: "admin", password: 123 }).then((resp: any) => {
         console.log(resp);
       });
     },
   },
-  mounted() {
-
-  },
+  mounted() {},
 });
 </script>
 

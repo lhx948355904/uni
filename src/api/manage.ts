@@ -5,7 +5,7 @@ const http = axios.create({
     baseURL: "/api"
 })
 
-export function postAction(url,params){
+export function postAction(url:string,params:object){
     return http({
         url:url,
         method:"post",
@@ -13,7 +13,7 @@ export function postAction(url,params){
     })
 }
 
-export function getAction(url,params){
+export function getAction(url:string,params:object){
     return http({
         url:url,
         method:"get",
@@ -21,7 +21,7 @@ export function getAction(url,params){
     })
 }
 
-export function httpAction(url,params,method){
+export function httpAction(url:string,params:object,method:any){
     return http({
         url:url,
         method:method,
