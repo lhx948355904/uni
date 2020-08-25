@@ -4,20 +4,28 @@
 
 <script lang="ts">
 import Vue from "vue";
+import {mapActions} from 'vuex'
 import { login } from "@/api/api";
+import store from "@/store/store"
 
 export default Vue.extend({
   data() {
     return {};
   },
   methods: {
+    ...mapActions([
+      "login"
+    ]),
     loginMethod() {
-      login({ username: "admin", password: 123 }).then((resp: any) => {
-        console.log(resp);
+      
+      this.login({ username: "admin", password: 123456 }).then((resp: any) => {
+        console.log(resp)
       });
     },
   },
-  mounted() {},
+  mounted() {
+    console.log(this.store)
+  },
 });
 </script>
 

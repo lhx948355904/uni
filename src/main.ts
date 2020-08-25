@@ -4,6 +4,7 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 import { RouterMount } from 'uni-simple-router';
+import store from './store'
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios;
@@ -11,7 +12,8 @@ Vue.prototype.$http = axios;
 (App as any).mpType = 'app'
 const app = new Vue({
 	...App,
-	...router
+	...router,
+	...store,
 })
 // #ifdef H5
 	RouterMount(app,'#app');
