@@ -8,7 +8,7 @@ const user = {
     getters:{
         
     },
-    mutation:{
+    mutations:{
         SET_TOKEN(state:any,token:string){
             state.token = token;
         },
@@ -20,6 +20,7 @@ const user = {
         login({commit}:any,userInfo:object){
             return new Promise((resolve,reject) => {
                 login(userInfo).then(resp => {
+                    console.log(resp)
                     if(resp.data.msg){
                         //储存用户信息
                         commit("SET_NAME",resp.data.username)

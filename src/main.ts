@@ -8,6 +8,7 @@ import store from './store'
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios;
+Vue.prototype.$store = store;
 
 (App as any).mpType = 'app'
 const app = new Vue({

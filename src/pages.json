@@ -1,16 +1,15 @@
 {
 	"easycom": {
-        "autoscan": true,
-        "custom": {
-            // uni-ui 规则如下配置
-            "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
-        }
-    },
+		"autoscan": true,
+		"custom": {
+			// uni-ui 规则如下配置
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
 	"pages": [
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-	
 		{
-            "path": "pages/index/index",
+			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "首页"
 			}
@@ -30,15 +29,68 @@
 		{
 			"path": "pages/my/index",
 			"style": {
-				"transparentTitle":"always",
+				"transparentTitle": "always",
 				"app-plus": {
 					"titleNView": false
 				}
 			}
 		},
 		{
-            "path": "pages/login"
-			
+			"path": "pages/my/myRepair",
+			"style": {
+				"navigationBarTitleText": "我的维修"
+			}
+		},
+		{
+			"path": "pages/my/myReportRepair",
+			"style": {
+				"navigationBarTitleText": "我的报修"
+			}
+		},
+		{
+			"path": "pages/my/myMaintain",
+			"style": {
+				"navigationBarTitleText": "我的保养"
+			}
+		},
+		{
+			"path": "pages/my/myInspection",
+			"style": {
+				"navigationBarTitleText": "我的巡检"
+			}
+		},
+		{
+			"path": "pages/news/SystemNews",
+			"style": {
+				"navigationBarTitleText": "系统通知"
+			}
+		},
+		{
+			"path": "pages/news/Repair",
+			"style": {
+				"navigationBarTitleText": "维修工单"
+			}
+		},
+		{
+			"path": "pages/news/ReportRepair",
+			"style": {
+				"navigationBarTitleText": "故障申报"
+			}
+		},
+		{
+			"path": "pages/news/Maintain",
+			"style": {
+				"navigationBarTitleText": "保养工单"
+			}
+		},
+		{
+			"path": "pages/news/Inspection",
+			"style": {
+				"navigationBarTitleText": "巡检工单"
+			}
+		},
+		{
+			"path": "pages/login"
 		}
 	],
 	"globalStyle": {
@@ -61,7 +113,8 @@
 		"selectedColor": "#007AFF",
 		"borderStyle": "black",
 		"backgroundColor": "#F8F8F8",
-		"list": [{
+		"list": [
+			{
 				"pagePath": "pages/index/index",
 				"iconPath": "static/home.png",
 				"selectedIconPath": "static/home_active.png",
@@ -72,12 +125,14 @@
 				"iconPath": "static/map.png",
 				"selectedIconPath": "static/map_active.png",
 				"text": "地图"
-			}, {
+			},
+			{
 				"pagePath": "pages/news/index",
 				"iconPath": "static/news.png",
 				"selectedIconPath": "static/news_active.png",
 				"text": "消息"
-			}, {
+			},
+			{
 				"pagePath": "pages/my/index",
 				"iconPath": "static/my.png",
 				"selectedIconPath": "static/my_active.png",

@@ -68,6 +68,7 @@ export default Vue.extend({
     menuList({}).then((datas: any) => {
       this.menuList = datas.data.menuList;
     });
+    
   },
 });
 </script>

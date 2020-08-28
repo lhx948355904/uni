@@ -18,10 +18,9 @@
 
     <view>
       <uni-list>
-        
         <uni-list-item
           title="我的维修"
-          to="https://www.baidu.com"
+          to="/pages/my/myRepair"
           clickable
           link
           :thumb="require('@/static/gd-icon.png')"
@@ -29,41 +28,41 @@
         />
 
         <uni-list-item
-            title="我的报修"
-            to="https://www.baidu.com"
-            clickable
-            link
-            :thumb="require('@/static/bx-icon.png')"
-            thumb-size="lg"
-          />
+          title="我的报修"
+          to="/pages/my/myReportRepair"
+          clickable
+          link
+          :thumb="require('@/static/bx-icon.png')"
+          thumb-size="lg"
+        />
 
         <uni-list-item
-            title="我的保养"
-            to="https://www.baidu.com"
-            clickable
-            link
-            :thumb="require('@/static/by-icon.png')"
-            thumb-size="lg"
-          />
+          title="我的保养"
+          to="/pages/my/myMaintain"
+          clickable
+          link
+          :thumb="require('@/static/by-icon.png')"
+          thumb-size="lg"
+        />
 
         <uni-list-item
-            title="我的巡检"
-            to="https://www.baidu.com"
-            clickable
-            link
-            :thumb="require('@/static/xj-icon.png')"
-            thumb-size="lg"
-          />
+          title="我的巡检"
+          to="/pages/my/myInspection"
+          clickable
+          link
+          :thumb="require('@/static/xj-icon.png')"
+          thumb-size="lg"
+        />
 
         <uni-list-item
-            title="系统设置"
-            to="https://www.baidu.com"
-            clickable
-            link
-            :thumb="require('@/static/sz-icon.png')"
-            thumb-size="lg"
-          />
-        </uni-list>
+          title="系统设置"
+          to="https://www.baidu.com"
+          clickable
+          link
+          :thumb="require('@/static/sz-icon.png')"
+          thumb-size="lg"
+        />
+      </uni-list>
     </view>
 
     <view class="logout">
@@ -74,12 +73,8 @@
 
 <script>
 import Vue from "vue";
-import { uniList, uniListItem, uniListChat } from "@dcloudio/uni-ui";
 export default {
   components: {
-    uniList,
-    uniListItem,
-    uniListChat,
   },
 };
 </script>
