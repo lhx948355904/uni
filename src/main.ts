@@ -3,11 +3,11 @@ import App from './App.vue'
 // @ts-ignore;
 import router from './router'
 import axios from 'axios'
-import { RouterMount } from 'uni-simple-router';
+import { RouterMount } from 'uni-simple-router'
 import store from './store'
 
 Vue.config.productionTip = false
-Vue.prototype.$http = axios;
+Vue.prototype.$http = axios
 Vue.prototype.$store = store;
 
 (App as any).mpType = 'app'
@@ -17,11 +17,11 @@ const app = new Vue({
 	...store,
 })
 // #ifdef H5
-	RouterMount(app,'#app');
+	RouterMount(app,'#app')
 // #endif
 
 // #ifndef H5
-	app.$mount(); //为了兼容小程序及app端必须这样写才有效果
+	app.$mount() //为了兼容小程序及app端必须这样写才有效果
 // #endif
 
 // var vm = new App().$mount();

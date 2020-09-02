@@ -1,10 +1,24 @@
 <template>
-  <div @click="loginMethod">登录</div>
+  <view class="login">
+    <img class="logo" :src="require('@/static/login-logo.png')" alt />
+
+    <view class="form">
+      <view class="username">
+        <view class="title">用户名 / 邮箱</view>
+        <input class="uni-input" maxlength="10" ref="username" type="text" placeholder="请输入用户名" />
+      </view>
+      <view class="password">
+        <view class="title">密码</view>
+        <input class="uni-input" maxlength="10" ref="password" type="password" placeholder="请输入密码" />
+      </view>
+      <view class="logout" @click="loginMethod">登录</view>
+    </view>
+  </view>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import {mapActions} from 'vuex'
+import { mapActions } from "vuex";
 import { login } from "@/api/api";
 // import store from "@/store/store"
 
@@ -13,23 +27,59 @@ export default Vue.extend({
     return {};
   },
   methods: {
-    // ...mapActions([
-    //   "login"
-    // ]),
-    // loginMethod() {
-      
-    //   this.login({ username: "admin", password: 123456 }).then((resp: any) => {
-        
-    //   }).catch(err => {
-    //     console.log(err);
-    //   });
-    // },
+    ...mapActions(["login"]),
+    loginMethod() {
+      const usernameVal = (this.$refs.username as any).valueSync,
+        passwordVal = (this.$refs.password as any).valueSync;
+      if (!usernameVal || !passwordVal) {
+        uni.showToast({
+          title: "填写有误",
+          duration: 2000,
+          image: "../static/close.png",
+        });
+      }
+      this.login({ username: usernameVal, password: passwordVal });
+    },
   },
-  mounted() {
-    console.log(this.$store)
-  },
+  mounted() {},
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
+.login {
+  height: 100vh;
+  background: url("@/static/login-bg.png") no-repeat;
+  background-size: 100% 100%;
+
+  .logo {
+    width: 30%;
+    .tc_self;
+    margin-top: 200rpx;
+    margin-bottom: 120rpx;
+  }
+
+  .form {
+    .tc_self;
+    width: 70%;
+    color: white;
+
+    view {
+      margin-bottom: 30rpx;
+    }
+
+    input {
+      border-bottom: 1rpx solid white;
+      margin-bottom: 40rpx;
+      .height(60rpx);
+    }
+
+    .logout {
+      background: rgba(255, 255, 255, 0.5);
+      .tc;
+      .height(80rpx);
+      border-radius: 100rpx;
+      margin-top: 100rpx;
+    }
+  }
+}
 </style>

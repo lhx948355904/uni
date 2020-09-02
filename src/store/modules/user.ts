@@ -20,7 +20,6 @@ const user = {
         login({commit}:any,userInfo:object){
             return new Promise((resolve,reject) => {
                 login(userInfo).then(resp => {
-                    console.log(resp)
                     if(resp.data.msg){
                         //储存用户信息
                         commit("SET_NAME",resp.data.username)
@@ -28,6 +27,8 @@ const user = {
                         uni.switchTab({
                             url:"/pages/index/index",
                         })
+                        uni.setStorageSync('token',resp.data.token)
+                        uni.setStorageSync('username',resp.data.username)
                         resolve(resp)
                     }else{
                         reject(resp)

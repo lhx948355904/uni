@@ -65,7 +65,7 @@
       </uni-list>
     </view>
 
-    <view class="logout">
+    <view class="logout" @click="logout">
       <text>退出登录</text>
     </view>
   </view>
@@ -73,9 +73,17 @@
 
 <script>
 import Vue from "vue";
+import router from '@/router';
 export default {
   components: {
   },
+  methods:{
+    logout(){
+      uni.removeStorageSync("token");
+      uni.removeStorageSync("username");
+      router.push("/pages/login");
+    }
+  }
 };
 </script>
 
