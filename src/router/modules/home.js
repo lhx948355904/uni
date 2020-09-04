@@ -46,16 +46,48 @@ const home = [
     name: 'Repair',
   },
   {
+    path: '/pages/news/RepairList',
+    name: 'RepairList'
+  },
+  {
+    path: '/pages/news/RepairItem',
+    name: 'RepairItem'
+  },
+  {
     path: '/pages/news/Maintain',
     name: 'Maintain'
+  },
+  {
+    path: '/pages/news/MaintainList',
+    name: 'MaintainList'
+  },
+  {
+    path: '/pages/news/MaintainItem',
+    name: 'MaintainItem'
   },
   {
     path: '/pages/news/ReportRepair',
     name: 'ReportRepair'
   },
   {
+    path: '/pages/news/ReportRepairList',
+    name: 'ReportRepairList'
+  },
+  {
+    path: '/pages/news/ReportRepairItem',
+    name: 'ReportRepairItem'
+  },
+  {
     path: "/pages/news/Inspection",
     name: 'Inspection'
-  }
+  },
+  {
+    path: '/pages/news/InspectionList',
+    name: 'InspectionList'
+  },
+  {
+    path: '/pages/news/InspectionItem',
+    name: 'InspectionItem'
+  },
 ]
 export default home

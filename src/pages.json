@@ -7,15 +7,14 @@
 		}
 	},
 	"pages": [
-		{
-			"path": "pages/start-up",
-            "style": {
-                "navigationBarTitleText": "",
-                "app-plus": {
-                    "titleNView": false
-                }
-            }
-		},
+		// {
+		// 	"path": "pages/start-up",
+		// 	"style": {
+		// 		"app-plus": {
+		// 			"titleNView":false
+		// 		}
+		// 	}
+		// },
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
@@ -68,6 +67,8 @@
 				"navigationBarTitleText": "我的巡检"
 			}
 		},
+
+
 		{
 			"path": "pages/news/SystemNews",
 			"style": {
@@ -81,7 +82,31 @@
 			}
 		},
 		{
+			"path": "pages/news/RepairList",
+			"style": {
+				"navigationBarTitleText": "维修工单"
+			}
+		},
+		{
+			"path": "pages/news/RepairItem",
+			"style": {
+				"navigationBarTitleText": "维修工单"
+			}
+		},
+		{
 			"path": "pages/news/ReportRepair",
+			"style": {
+				"navigationBarTitleText": "故障申报"
+			}
+		},
+		{
+			"path": "pages/news/ReportRepairList",
+			"style": {
+				"navigationBarTitleText": "故障申报"
+			}
+		},
+		{
+			"path": "pages/news/ReportRepairItem",
 			"style": {
 				"navigationBarTitleText": "故障申报"
 			}
@@ -93,11 +118,37 @@
 			}
 		},
 		{
+			"path": "pages/news/MaintainList",
+			"style": {
+				"navigationBarTitleText": "保养工单"
+			}
+		},
+		{
+			"path": "pages/news/MaintainItem",
+			"style": {
+				"navigationBarTitleText": "保养工单"
+			}
+		},
+		{
 			"path": "pages/news/Inspection",
 			"style": {
 				"navigationBarTitleText": "巡检工单"
 			}
 		},
+		{
+			"path": "pages/news/InspectionList",
+			"style": {
+				"navigationBarTitleText": "巡检工单"
+			}
+		},
+		{
+			"path": "pages/news/InspectionItem",
+			"style": {
+				"navigationBarTitleText": "设备巡检"
+			}
+		},
+
+
 		{
 			"style": {
 				"app-plus": {

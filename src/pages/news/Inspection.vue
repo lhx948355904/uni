@@ -17,6 +17,7 @@
               :avatar="require('@/static/xj-icon.png')"
               :note="item.note"
               :time="item.time"
+              :to="'/pages/news/InspectionList?id='+item.id"
             ></uni-list-chat>
             <img class="statusImg" :src="chooseStatus(item.status)" />
           </view>

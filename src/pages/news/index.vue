@@ -1,15 +1,16 @@
 <template>
   <view id="myNews">
     <uni-list>
-      <navigator :url="`${item.url}`" v-for="item in list" :key="item.id">
-        <uni-list-chat
-          :avatar-circle="true"
-          :title="item.title"
-          :avatar="require(`@/static/${item.img}-icon.png`)"
-          :note="item.note"
-          :time="item.time"
-        ></uni-list-chat>
-      </navigator>
+      <uni-list-chat
+        v-for="item in list"
+        :key="item.id"
+        :avatar-circle="true"
+        :title="item.title"
+        :avatar="require(`@/static/${item.img}-icon.png`)"
+        :note="item.note"
+        :time="item.time"
+        :to="item.url"
+      ></uni-list-chat>
     </uni-list>
   </view>
 </template>
@@ -60,8 +61,8 @@ export default Vue.extend({
           title: "维修工单",
           time: "2020-02-02 20:20",
           note: "DEMO设备异常",
-          id: "4",
-          status: 4,
+          id: "5",
+          status: 5,
           img: "gd",
           url: "/pages/news/Repair",
         },
@@ -71,5 +72,5 @@ export default Vue.extend({
 });
 </script>
 
-<style>
+<style lang="less" scoped>
 </style>
