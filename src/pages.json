@@ -34,6 +34,9 @@
 				"navigationBarTitleText": "消息"
 			}
 		},
+
+
+
 		{
 			"path": "pages/my/index",
 			"style": {
@@ -50,7 +53,31 @@
 			}
 		},
 		{
+			"path": "pages/my/myRepairList",
+			"style": {
+				"navigationBarTitleText": "维修工单"
+			}
+		},
+		{
+			"path": "pages/my/myRepairItem",
+			"style": {
+				"navigationBarTitleText": "维修工单"
+			}
+		},
+		{
 			"path": "pages/my/myReportRepair",
+			"style": {
+				"navigationBarTitleText": "我的报修"
+			}
+		},
+		{
+			"path": "pages/my/myReportRepairList",
+			"style": {
+				"navigationBarTitleText": "我的报修"
+			}
+		},
+		{
+			"path": "pages/my/myReportRepairItem",
 			"style": {
 				"navigationBarTitleText": "我的报修"
 			}
@@ -62,11 +89,38 @@
 			}
 		},
 		{
+			"path": "pages/my/myMaintainList",
+			"style": {
+				"navigationBarTitleText": "我的保养"
+			}
+		},
+		{
+			"path": "pages/my/myMaintainItem",
+			"style": {
+				"navigationBarTitleText": "我的保养"
+			}
+		},
+		{
 			"path": "pages/my/myInspection",
 			"style": {
 				"navigationBarTitleText": "我的巡检"
 			}
 		},
+		{
+			"path": "pages/my/myInspectionList",
+			"style": {
+				"navigationBarTitleText": "我的巡检"
+			}
+		},
+		{
+			"path": "pages/my/myInspectionItem",
+			"style": {
+				"navigationBarTitleText": "我的巡检"
+			}
+		},
+
+
+
 
 
 		{
@@ -75,6 +129,7 @@
 				"navigationBarTitleText": "系统通知"
 			}
 		},
+
 		{
 			"path": "pages/news/Repair",
 			"style": {
@@ -93,6 +148,7 @@
 				"navigationBarTitleText": "维修工单"
 			}
 		},
+
 		{
 			"path": "pages/news/ReportRepair",
 			"style": {
@@ -111,6 +167,7 @@
 				"navigationBarTitleText": "故障申报"
 			}
 		},
+
 		{
 			"path": "pages/news/Maintain",
 			"style": {
@@ -129,6 +186,7 @@
 				"navigationBarTitleText": "保养工单"
 			}
 		},
+
 		{
 			"path": "pages/news/Inspection",
 			"style": {
@@ -147,6 +205,7 @@
 				"navigationBarTitleText": "设备巡检"
 			}
 		},
+
 
 
 		{

@@ -20,6 +20,7 @@
 import Vue from "vue";
 import { mapActions } from "vuex";
 import { login } from "@/api/api";
+import axios from "axios";
 // import store from "@/store/store"
 
 export default Vue.extend({
@@ -38,7 +39,18 @@ export default Vue.extend({
           image: "../static/close.png",
         });
       }
-      this.login({ username: usernameVal, password: passwordVal });
+      axios
+        .post("api/a/login", {
+          username: usernameVal,
+          password: passwordVal,
+          mobileLogin: "1",
+        },{
+          headers: {'Accept': '*/*'}
+        })
+        .then((resp) => {
+          console.log(resp);
+        });
+      // this.login({ username: usernameVal, password: passwordVal,mobileLogin:"1" });
     },
   },
   mounted() {},

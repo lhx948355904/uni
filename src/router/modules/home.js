@@ -26,16 +26,48 @@ const home = [
     name: 'myRepair',
   },
   {
+    path: '/pages/my/myRepairList',
+    name: 'myRepairList'
+  },
+  {
+    path: '/pages/my/myRepairItem',
+    name: 'myRepairItem'
+  },
+  {
     path: '/pages/my/myMaintain',
     name: 'myMaintain'
+  },
+  {
+    path: '/pages/my/myMaintainList',
+    name: 'myMaintainList'
+  },
+  {
+    path: '/pages/my/myMaintainItem',
+    name: 'myMaintainItem'
   },
   {
     path: '/pages/my/myReportRepair',
     name: 'myReportRepair'
   },
   {
+    path: '/pages/my/myReportRepairList',
+    name: 'myReportRepairList'
+  },
+  {
+    path: '/pages/my/myReportRepairItem',
+    name: 'myReportRepairItem'
+  },
+  {
     path: "/pages/my/myInspection",
     name: 'myInspection'
+  },
+  {
+    path: '/pages/my/myInspectionList',
+    name: 'myInspectionList'
+  },
+  {
+    path: '/pages/my/myInspectionItem',
+    name: 'myInspectionItem'
   },
   {
     path: '/pages/news/SystemNews',
